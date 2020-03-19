@@ -1,7 +1,7 @@
 function weather() {
 
   var location = document.getElementById("location");
-  var apiKey = 'a50c801faa5e68a95d30f584b895309c'; // PLEASE SIGN UP FOR YOUR OWN API KEY
+  var apiKey = '114212bc122609f21afc3bb8d58c844f'; // PLEASE SIGN UP FOR YOUR OWN API KEY
   var url = 'https://api.forecast.io/forecast/';
 
   navigator.geolocation.getCurrentPosition(success, error);
@@ -18,13 +18,27 @@ function weather() {
     });
   }
 
+ 
+
   function error() {
     location.innerHTML = "Unable to retrieve your location";
   }
 
   location.innerHTML = "Locating...";
 }
-  
+function manual() {
+  var location = document.getElementById("location");
+  var apiKey = '114212bc122609f21afc3bb8d58c844f'; // PLEASE SIGN UP FOR YOUR OWN API KEY
+  var url = 'https://api.forecast.io/forecast/';
+  var Lat = document.getElementById("Latitude").value;
+  var Lng = document.getElementById("Longitude").value;
+  location.innerHTML = 'Latitude is ' + Lat + '° <br> Longitude is ' + Lng + '°';
+
+  $.getJSON(url + apiKey + "/" + Lat + "," + Lng + "?callback=?", function(data) {
+   $('#temp').html(data.currently.temperature + '° F');
+   $('#minutely').html(data.minutely.summary);
+ });
+}
 
 
 weather();

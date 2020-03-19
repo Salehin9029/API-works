@@ -1,77 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css" />
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/js/script.js" ></script>
+    <title>WOW - Home</title>
+</head>
+<body>
+<!-- div used to make the body blur -->
+    <div class="overlay" id="overlay" onclick="closeNav()"></div>
 
-      <title> Weather </title>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-   </head>
+    <section class="head index-part-1">
+        <div class="head-bar">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 col-xs-6 col-sm-6 col-md-6">
+                </div>
+                <div class="col-lg-6 col-xs-6 col-sm-6 col-md-6 text-right">
+                    <div id="mySidenav" class="sidenav text-center">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+                        <a href="index.html">Home</a><hr>            
+                    </div>
+                    <div class="main" id="main">
+                      <a href="#" onclick="openNav()">MENU &#9776;</a>
+                    </div>
+                </div>
+              </div>
+              <hr>
+          </div>
+          </div>
+          <div class="wow">
+          <div class="container">
+            <div class="row">
+               <div class="wow-logo">
+                  <img class="img-responsive img-logo" src="assets/img/logogo.png">
+               </div> 
+               <div class="font-1 helmet text-center">
+                 <p>A <strong>Combination</strong> of Weather and Map.</p>
+               </div>
+               <div class="wow-btn text-center">
+                     <a class="btn btn-default wow-button" href="Weather.php">Get Started!</a>
+               </div>
+               <div class="wow-logo">
+                <img class="img-responsive img-logo" src="assets/img/11.png">
+             </div> 
+            </div>
+          </div>
+        </div>
+    </section>
+ 
+    <section class="index-part-2">
+         <div class="container">
 
-   <body>
-   <div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
-<div class="content">
-<h1><div id="temp"></div><div id="minutely"></div></h1>
-      <h2><div id="location"></div></h2>
-      <div id="map" style="width:800px;height:400px; text-align: center; display: inline-block">A</div>
+            <div class="row">
+               <div class="text-center">
+                 <h2>Features</h2>
+               </div>
+               <hr class="hr-mid">
+               <div class="sub-text text-center">
+                     <p class="font-1">
+                        Sed varius suspendisse dictum leo ipsum amet pellentesque
+                        fusce ac hendrerit consectetur tempor lorem ipsum
+                     </p>
+               </div>
+           </div>
 
-</div>
-            <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      var map, infoWindow;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        infoWindow = new google.maps.InfoWindow;
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+    </section>
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
+    <section class="index-part-3">
+        <div class="container">
+                <div class="row why-div">
+                  <div class="text-center">
+                         <h2>Team Members(๑•̀ㅂ•́)و✧</h2>
+                  </div>
+                             <p class="font-1"></p>
+                </div>
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-   
-    </script>
+                <div class="row">
+                    <div class="col-lg-9 col-sm-12 col-md-9 col-xs-12">
+                     <div class="holder-para">
+                      <h3>Ahmad Najeeb</h3>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Master of Applied Computing
+                        <br>
+                        University of WindsorWindsor, ON, Canada
+                        <br>
+                        najeeba@uwindsor.ca
+                      </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                              <img class="round-img img-responsive center-block" src="assets/img/q.png">
+                            </div>
+                    </div>
+                </div>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx1MD1zTTQTfcLvaUlk2vngDsbgLEx5Cc&callback=myMap&callback=initMap">
-    </script>
-    <?php
-    $myfile = fopen("logs.txt", "a") or die("Unable to open file!");
-    $txt = "user id date";
-    fwrite($myfile, "\n". $txt);
-    fclose($myfile);
-    ?>
-   </body>
-   <script src="app.js"></script>
-</html> 
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h3>Sheikh Sadaf Tasin</h3>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                      Master of Applied Computing <br> 
+                      University of WindsorWindsor, ON, Canada <br>
+                      tasins@uwinsor.ca
+                      </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img">
+                              <img class="round-img img-responsive center-block" src="assets/img/q.png">
+                            </div>
+                    </div> 
+                </div>
+
+                <hr class="line-full">
+                
+                <div class="row">
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                     <div class="holder-para">
+                      <h3>Salehin Rahman Khan</h3>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                        Master of Applied Computing <br>
+                        University of WindsorWindsor, ON, Canada <br>
+                        khan1fm@uwindsor.ca
+                      </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                            <div class="holder-img">
+                              <img class="round-img img-responsive center-block" src="assets/img/q.png">
+                            </div>
+                    </div>
+                </div>
+
+                <hr class="line-full">
+                
+                <div class="row"> 
+                    <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9 col-md-push-3">
+                     <div class="holder-para">
+                      <h3>Yehan Li</h3>
+                      <hr class="hr-short">
+                      <p class="font-2">
+                      Master of Applied Computing <br> 
+                      University of WindsorWindsor, ON, Canada <br>
+                      li1as@uwindsor.ca
+                      </p>
+                     </div>
+                    </div>
+                    <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3 col-md-pull-9">
+                            <div class="holder-img">
+                              <img class="round-img img-responsive center-block" src="assets/img/q.png">
+                            </div>
+                    </div> 
+                </div>
+
+                <hr class="line-full">
+
+                <div class="row">
+                  <div class="col-lg-9 col-xs-12 col-sm-12 col-md-9">
+                   <div class="holder-para">
+                    <h3>Yidi Deng</h3>
+                    <hr class="hr-short">
+                    <p class="font-2">
+                      Master of Applied Computing <br>
+                      University of WindsorWindsor, ON, Canada <br>
+                      deng12@uwindsor.ca
+                    </p>
+                   </div>
+                  </div>
+                  <div class="col-lg-3 col-xs-12 col-sm-12 col-md-3">
+                          <div class="holder-img">
+                            <img class="round-img img-responsive center-block" src="assets/img/w.png">
+                          </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+            <div class="footer-p1">
+                    <p class="font-2">Copy right 2020 by Group 32</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+</body>
+</html>
+
+
